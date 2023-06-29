@@ -15,6 +15,7 @@ public class run {
 		exercise_Array1 exArr = new exercise_Array1();
 //		exArr.exercise1();
 //		exArr.exercise2();
+//		exArr.lottoExercise();
 		Exercise_for exFor = new Exercise_for();
 //		exFor.for_double_exercise2();
 //		exArr.arryCopyExercies();
@@ -35,10 +36,15 @@ public class run {
 //		exarrdim.exercise2();
 //		exarrdim.exercise3();
 //		exarrdim.exercise4();
-		exarrdim.exercise5();
+//		exarrdim.exercise5();
 		Exercise_Exception exception = new Exercise_Exception();
 //		exception.exercies1() ;
-		exception.practice2();
+//		exception.exercise2();
+//		exception.exercise3();
+//		exception.exercise4();
+//		exception.fora();
+//		exception.fora2();
+//		exception.fora3();
 	}
 
 }

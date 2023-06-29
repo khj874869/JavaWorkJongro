@@ -170,28 +170,43 @@ public class exercise_Array1 {
 				}
 			}
 			public void BaskinRobbins31() {
-				Random rand = new Random();
-				boolean bool = true;
+				Random r = new Random();
 				Scanner sc = new Scanner(System.in);
 				int num = sc.nextInt();
-				int ice = rand.nextInt(3);
+				r.nextInt(3);
 				int sum = 0;
-				for(int i=num;i<=31;i++) {					
-					sum += num;
-					System.out.print(sum+"!");
-					sum += ice;
-					System.out.println(sum+"!");
-						if(ice ==31)
-						{
-							
-							System.out.print("당신이 졌습니다.");
-						}else {
-							System.out.print("당신이 이겼습니다.");
-						}
-						}
+			
+						
 					}
 				
-			
+			public void lottoExercise() {
+				int [] lottoNums = new int[6];
+				Random r = new Random();
+//				int count = 1;
+				for(int i=0; i<lottoNums.length;i++) {					
+					lottoNums[i]=r.nextInt(45)+1;
+					for(int j =0;j<i;j++) {						
+						if(lottoNums[i] == lottoNums[j]) {
+							i--;
+							break;
+						}
+					}
+				}
+//				check++;
+				for(int i = 0 ; i<lottoNums.length-1 ; i++) {
+					for(int j = 0 ; j<(lottoNums.length-1)-i ; j++) {						
+						if(lottoNums[j]>lottoNums[j+1]) {
+							int check=lottoNums[j]  ;
+							lottoNums[j] = lottoNums[j+1];
+							lottoNums[j] = check;
+						}
+					}
+				}
+				for(int i =0; i <lottoNums.length;i++) {					
+					System.out.print(lottoNums[i] + " ");					
+				}
+				
+			}
 			
 		
 			}
