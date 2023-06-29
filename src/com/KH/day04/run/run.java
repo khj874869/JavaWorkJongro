@@ -1,9 +1,12 @@
-package com.KH.day03.array.run;
+package com.KH.day04.run;
 
 import java.util.Random;
 
 import com.KH.day03.array.exercise.Exercise_for;
 import com.KH.day03.array.exercise.exercise_Array1;
+import com.KH.day04.dimarray.Exam_DimArray;
+import com.KH.day04.dimarray.exercise.exercise_dimarray;
+import com.KH.day04.myexception.exercise.Exercise_Exception;
 public class run {
 	public static void main(String [] args)
 	{
@@ -27,6 +30,15 @@ public class run {
 //		exArr.example6();
 //		exArr.practice11();
 //		exArr.randgame();
+		exercise_dimarray exarrdim = new exercise_dimarray();
+//		exarrdim.exercise1() ;
+//		exarrdim.exercise2();
+//		exarrdim.exercise3();
+//		exarrdim.exercise4();
+		exarrdim.exercise5();
+		Exercise_Exception exception = new Exercise_Exception();
+//		exception.exercies1() ;
+		exception.practice2();
 	}
 
 }

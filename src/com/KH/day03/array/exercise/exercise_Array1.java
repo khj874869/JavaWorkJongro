@@ -171,7 +171,7 @@ public class exercise_Array1 {
 			}
 			public void BaskinRobbins31() {
 				Random rand = new Random();
-
+				boolean bool = true;
 				Scanner sc = new Scanner(System.in);
 				int num = sc.nextInt();
 				int ice = rand.nextInt(3);
@@ -191,6 +191,9 @@ public class exercise_Array1 {
 						}
 					}
 				
+			
+			
+		
 			}
 
 
