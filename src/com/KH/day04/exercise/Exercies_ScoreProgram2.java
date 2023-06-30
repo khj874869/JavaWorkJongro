@@ -9,8 +9,7 @@ public class Exercies_ScoreProgram2 {
 	public static void main(String [] args) 
 	{
 		finish : 
-		while(true) {
-			
+		while(true) {			
 			Scanner sc = new Scanner(System.in);
 			printmenu();
 			int val = sc.nextInt();
