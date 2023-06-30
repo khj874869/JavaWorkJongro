@@ -1,26 +1,25 @@
 package com.KH.day04.exercise;
-
 import java.util.Scanner;
 
-public class Exercies_ScoreProgram {
-	static int kor =0;
-	static int eng =0;
-	static int math =0;
-	static int sum =0;
+import com.KH.day05.oop.exercise.Student;
+
+public class Exercies_ScoreProgram2 {
+	Student student = new com.KH.day05.oop.exercise.Student();
 
 	public static void main(String [] args) 
 	{
 		finish : 
 		while(true) {
+			
 			Scanner sc = new Scanner(System.in);
 			printmenu();
 			int val = sc.nextInt();
 			
 			switch(val) 
 			{
-			case 1 : inputScore();
+			case 1 : Student.inputStudentScore();
 			break;			
-			case 2:  printScore() 
+			case 2: Student.printStudentScore();
 			;
 			break;
 			case 3: showGoodByte();break finish;
@@ -37,24 +36,8 @@ public class Exercies_ScoreProgram {
 		System.out.print("선택 : " );
 		
 	}
-	public static void inputScore() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("=========성적 입력==========="); 		
-		System.out.print("국어 :" );
-		kor=sc.nextInt();
-		System.out.print("수학 :" );
-		math =sc.nextInt();
-		System.out.print("영어 :");
-		eng=sc.nextInt();
-	}
-	public static void printScore() {
-		sum = kor + math + eng;
-		System.out.println("국어 :" + kor);
-		System.out.println("수학 :" + math);
-		System.out.println("영어 :"+ eng);
-		System.out.println("총점:"+sum);
-		System.out.printf("평균: %.2f\n" , (double)sum/3);
-	}
+	
+
 	public static void showGoodByte() {
 		System.out.println("프로그램 종료");
 	}

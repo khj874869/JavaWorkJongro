@@ -19,7 +19,7 @@ public class run {
 		Exercise_for exFor = new Exercise_for();
 //		exFor.for_double_exercise2();
 //		exArr.arryCopyExercies();
-//		exArr.LottoExercies();
+//		exArr.lottoExercise();
 //		Random rand = new Random();
 //		int number = rand.nextInt(46);
 //		System.out.print(number+" ");
@@ -37,6 +37,7 @@ public class run {
 //		exarrdim.exercise3();
 //		exarrdim.exercise4();
 //		exarrdim.exercise5();
+//		exarrdim.exercise7();
 		Exercise_Exception exception = new Exercise_Exception();
 //		exception.exercies1() ;
 //		exception.exercise2();
@@ -45,6 +46,8 @@ public class run {
 //		exception.fora();
 //		exception.fora2();
 //		exception.fora3();
+//		exarrdim.exercise6();
+		
 	}
 
 }
