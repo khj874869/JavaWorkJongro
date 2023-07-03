@@ -16,6 +16,11 @@ public class run {
 //		exArr.exercise1();
 //		exArr.exercise2();
 //		exArr.lottoExercise();
+//		exArr.practice1();
+//		exArr.practice2();
+//		exArr.practice3();
+//		exArr.practice4();
+		
 		Exercise_for exFor = new Exercise_for();
 //		exFor.for_double_exercise2();
 //		exArr.arryCopyExercies();

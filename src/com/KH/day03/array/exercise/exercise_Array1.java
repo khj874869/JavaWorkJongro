@@ -208,8 +208,55 @@ public class exercise_Array1 {
 				
 			}
 			
-		
+		public void practice1() {
+			int []num = new int [10];
+			int k =1;
+			for(int i=0;i<num.length;i++) {
+				num[i] = k;
+				k++;
 			}
+			for(int i = 0 ; i<num.length;i++) {
+				System.out.print(num[i] + " ");
+			}
+		}
+			
+		public void practice2() {
+			int []num = new int [10];
+			for(int i=num.length-1;i>=0;i--) {
+				num[i] = i+1;
+				
+			}
+			for(int i=num.length-1;i>=0;i--) {
+				System.out.print(num[i] + " ");
+			}
+		}
+
+		public void practice3() {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("정수 입력:");
+			int input = sc.nextInt();
+			int [] num = new int [input];
+			int k = 1;
+			for(int i = 0; i<num.length ; i++) {
+				num[i] = k;
+				k++;
+			}
+			for(int i = 0; i<num.length ; i++) {
+				System.out.print(num[i] + " ");}
+		}
+
+		public void practice4() {
+			String [] str = {"사과","귤","포도","복숭아","참외"};
+			System.out.print(str[1]);
+		}
+		
+		public void practice5() {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("문자입력");
+			String str = sc.next();
+			char ch = str.charAt(0); 
+		}
+}
 
 
 
