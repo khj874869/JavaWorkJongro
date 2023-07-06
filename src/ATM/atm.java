@@ -14,12 +14,13 @@ public class atm {
 			case 2 : at.inputCharge(); break;
 			case 3 : at.now(); break ;
 			case 4 : at.Casinogame(); break;
-			case 5 : showGoodByte() ; break finish;
+			case 5 : showGoodByte() ; break finish ;
 			default : printException(); break;
 			}
 		
 		}
-		finish:
+	 
+				finish:
 		while(true) {		
 			Scanner sc = new Scanner(System.in);
 			int col = at.Casinogame();
@@ -27,7 +28,7 @@ public class atm {
 			case 1 :  at.ledder(); break;
 			case 2 : at.blackjack(); break;
 			case 3 : at.russianRoullet(); break ;
-			case 4 : showGoodByte() ; break finish;
+			case 4 : showGoodByte() ; return ;
 			default : printException(); break;
 			}
 		}

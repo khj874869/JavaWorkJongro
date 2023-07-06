@@ -44,6 +44,7 @@ public class ATM_code {
 	}
 	public int Casinogame() {		
 			Scanner sc = new Scanner(System.in);
+			System.out.println("==================Casino===============");
 			System.out.println("1.사다리"); 
 			System.out.println("2.블랙잭"); 
 			System.out.println("3.러시안 룰렛"); 
