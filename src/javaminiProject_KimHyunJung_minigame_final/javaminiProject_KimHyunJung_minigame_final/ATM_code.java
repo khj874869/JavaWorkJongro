@@ -35,8 +35,8 @@ public class ATM_code {
 		 System.out.println("4.카지노"); 
 		 System.out.println("5.나가기");
 		 System.out.print("입력:");
-		int input = sc.nextInt();
-		return input;
+		 int input = sc.nextInt();
+		 return input;
 		}
 	public void outputCharge( ) {
 		Scanner sc = new Scanner(System.in);
