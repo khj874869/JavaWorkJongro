@@ -72,7 +72,9 @@ public class Function {
 			
 	
 		}
-	}
+	} /**
+		*이름으로 찾고 
+	*/
 		public void delete() {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("삭제할 곡 입력 : ");
