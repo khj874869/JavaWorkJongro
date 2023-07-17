@@ -3,44 +3,49 @@ package com.KH.day16.network.exercise1;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class ClientServer {
 
 	public static void main(String[] args) {
-		ServerSocket serverSocket = null;
+		String address = "192.168.60.227";
+		int port = 7777;
 		InputStream is = null;
+		OutputStream os = null;
 		Scanner sc = new Scanner(System.in);
-		OutputStream os = null; 
 		try {
-			serverSocket = new ServerSocket(2322);
-			Socket socket = serverSocket.accept();
+			System.out.println("연결 요청중...");
+			// 설정된 IP, PORT에 연결 요청함.
+			Socket socket = new Socket(address, port);
+			// 연결 된 후에는 소켓 객체 생성
+			System.out.println("연결 성공!!");
+			// 프로그램 기준 나가니까 OutputStream
 			is = socket.getInputStream();
-			os = socket.getOutputStream();			
-			System.out.println("서버 소켓 생성");
-			System.out.println("클라이언트 대기중");
+			// 프로그램 기준 들어오니까 InputStream
+			os = socket.getOutputStream();
 			
-			System.out.println("클라이언트 접속 완료");
 			while(true) {
-				byte [] bytes = new byte[1024];
-				is.read(bytes);
-				int BytesNo = is.read(bytes);
-				//bytes에는 읽은 데이터, readByteNo은 읽은 객수
-				//byte로 출력할 수 없어서 문자열로 만들어줌.
-				String massage 
-				= new String(bytes,0,BytesNo);
-				System.out.printf("클라이언트(상대) : %s\n",massage);
-				
-				System.out.print("서버 메세지 출력:");
-				massage = sc.nextLine();
-				bytes = massage.getBytes();
+				// 1. 데이터 보내기
+				System.out.print("클라이언트(나) : ");
+				String message = sc.nextLine();
+				byte [] bytes = message.getBytes();
+				// 보낼때 버퍼에 씀 write()메소드 사용
 				os.write(bytes);
+				// 버퍼 비워주기 flush()!
 				os.flush();
-			
+				// =============== 보내기 완료 ============
+				// 4. 데이터 받기
+				bytes = new byte[1024];
+				int readByteNo = is.read(bytes);
+				message = new String(bytes, 0, readByteNo);
+				System.out.printf("서버(상대) : %s\n"
+						, message);
+				// ================= 받기 완료 ===============
 			}
-			//읽을 때에는 read()메소드 사용
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
