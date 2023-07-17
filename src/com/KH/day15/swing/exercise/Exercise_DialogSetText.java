@@ -12,10 +12,6 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-import com.kh.day15.swing.exercise.MyModalDialog;
-
-import images.Exercise_DialogSetText;
-
 class MyModalDialog extends JDialog {
 	private JTextField field;
 	private JButton btn;
