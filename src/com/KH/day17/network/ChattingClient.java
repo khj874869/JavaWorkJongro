@@ -1,0 +1,60 @@
+package com.KH.day17.network;
+
+import java.io.BufferedOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.Scanner;
+
+public class ChattingClient {
+
+	public static void main(String[] args) {
+		// 서버에 연결중입니다.
+		// 채팅서버에 접속하였습니다.
+		// 서버와의 채팅을 시작합니다.
+		// 서버(상대) : 하이
+		// 클라이언트(나) : 네네
+		String address= "127.0.0.1";
+		int port = 2345;
+		InputStream is = null;
+		OutputStream os = null;
+		Scanner sc = new Scanner(System.in);
+		DataInputStream dis = null; //보조 스트림, 기본 데이터 타입 입출력 도와줌
+		DataOutputStream dos = null; //보조 스트림, 기본 데이터 타입 입출력 도와줌
+		try {
+			System.out.println("서버 접속 중.");
+			Socket socket =new Socket(address,port);
+			System.out.println("채팅서버에 접속하였습니다.");
+			is = socket.getInputStream();
+			os = socket.getOutputStream();
+			dis = new DataInputStream(is);
+			dos = new DataOutputStream(os);
+			System.out.println("서버와 채팅 시작");
+				System.out.println("서버와의 채팅을 시작합니다.");
+				while(true) {
+					String recvMsg = dis.readUTF(); //받기
+					System.out.printf("서버(상대) : %s\n" ,recvMsg);
+					System.out.print("클라이언트(나) 메세지 입력 :");
+					String SendMsg = sc.nextLine();
+					dos.writeUTF(SendMsg); //보내기
+					dos.flush();
+				}
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+			
+	
+	
+	
+	
+	}
+
+}
