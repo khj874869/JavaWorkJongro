@@ -17,8 +17,7 @@ public class MotelView {
 		int roomNo = sc.nextInt();
 		return roomNo;
 	}
-	public void message(int roomNo) {
-		System.out.println(roomNo + "번 방에 입실하셨습니다.");
-
+	public void message(String msg) {
+		
 	}
 }

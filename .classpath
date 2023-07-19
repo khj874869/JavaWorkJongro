@@ -5,6 +5,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="com/KH/day18/member/" kind="src" path="src"/>
+	<classpathentry kind="src" path="/TitanicJava"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
